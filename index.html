@@ -9,6 +9,7 @@
     <title>de Ambacht</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://kit.fontawesome.com/507e3da8ea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
@@ -34,15 +35,14 @@
 </head>
 
 <body>
-
-    <!-- nav-bar -->
+<!-- nav-bar -->
     <nav class="navbar fixed-top navbar-expand-md bg-light ">
+        <!-- <nav class="navbar navbar-expand-md navbar-light pt-5 pb-4"> -->
         <div class="container-fluid">
             <a class="navbar-brand " href="#">
                 <!-- <img src="assets\logo.webp" alt="Bootstrap" class=""width="40" height="40"> -->
-
             </a>
-
+            <i class="bi bi-egg-fried"></i>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,22 +52,21 @@
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     <a class="nav-link" href="#how_it_works">Werk wijze</a>
-                    <a class="nav-link" href="#arrangementen">Arrangementen</a>
+                  
                     <a class="nav-link" href="#prijzen">Prijzen</a>
-                    
+                    <a class="nav-link" href="#reviews">Reviews</a>
+                
                     <a class="nav-link" href="#contact">Reserveer</a>
                     <a class="nav-link" href="#contact">Contact / informatie</a>
-
                 </div>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
-    <!-- main image & intro text -->
+<!-- main image & intro text -->
     <section id="intro">
         <div class="container-lg">
             <div class="row justify-content-center align-items-center">
-
                 <div class="col-md-5 text-center text-md-start">
                     <h1>
                         <div class="display-2">de Ambacht</div>
@@ -88,7 +87,7 @@
         </div>
     </section>
 
-    <!-- Topic Hoe gaan wij te werk -->
+ <!-- Topic Hoe gaan wij te werk -->
     <section id="how_it_works">
         <h3 class="text-center">Hoe gaan wij te werk ?</h3>
 
@@ -98,7 +97,6 @@
                     <img class="card-img-top-fluid rounded-circle p-4" src="assets/hoe_1.jpg" alt="image-kiezen">
                     <div class="card-body">
                         <h5 class="card-title text-decoration-underline">Kiezen</h5>
-
                         <p class="card-text">Aan de pannenkoekenkar hangen menukaarten met diverse toppings. Je kan zelf
                             keuze maken welke toppings je op je pannenkoek wilt, en deze combineren tot de perfecte
                             pannenkoek die aan al jouw verwachtingen voldoet. Zo zorgen wij voor een unieke en
@@ -150,7 +148,7 @@
         </div>
     </section>
 
-    <!-- pricing plans -->
+<!-- pricing plans -->
     <section id="prijzen" class="bg-light mt-5 ">
         <div class="text-center">
             <img src="assets\ambacht_2_1.jpeg" alt="Responsive image">
@@ -269,9 +267,54 @@
         </div>
     </section>
 
-    <!-- reviews list -->
+<!-- reviews list -->
+    <section id="reviews" class="bg-light">
+        <div class="container-lg">
+            <div class="text-center">
+                <h2><i class="bi bi-stars text-warning"></i>      Je mening over ons.     <i class="bi bi-stars text-warning"></i></h2>
+                <p class="lead">Dit zijn de ervaringen met onze pannenkoekenkar</p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="list-group lead text-start">
+                            <div class="list-group-item py-3 ">
+                                <div class="pb-2 text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <h5 class="mb-1 text-primary">Mooie kar, lekker en gezellig</h5> 
+                                <p class="mb-1">Echt heel gezellig en lekker. Bijkomend voordeel geen eten inslaan en geen afwas. Heb ik als gastvrouw ook een beetje kunnen geniet van de feestvreugde.</p>
+                            <small class="text-primary">geschreven door: Sieneke</small>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="list-group lead text-start">
+                            <div class="list-group-item py-3 ">
+                                <div class="pb-2 text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <h5 class="mb-1 text-primary">Bedankt en hopelijk tot ziens.</h5> 
+                                <p class="mb-1">Beset Rob, heel hartelijk dank voor de fijne lunch met pannenkoeken. Jos straalde helemaal en daar doen we het voor. Dit is zeker voor herhaling vatbaar. Hopelijk tot volgend jaar.</p>
+                            <small class="text-primary">geschreven door: Henny van der H</small>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
 
-    <!-- contact form -->
+    </section>
+
+<!-- contact form -->
     <section id="contact">
         <div class="container-lg">
             <div class="text-center">
@@ -332,6 +375,25 @@
                 </div>
             </div>
         </div>
+    </section>
+
+<!-- footer -->
+    <section class="footer bg-secondary py-2">
+        <div class="container lg">
+            <div class="text-center">
+                <h2 class="text-light">
+                    <i class="bi bi-facebook p-3"></i>
+                    <i class="bi bi-whatsapp p-3"></i>
+                    <i class="bi bi-instagram p-3"></i>
+                </h2>
+              
+            </div>
+        </div>
+
+        
+          
+     
+
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
