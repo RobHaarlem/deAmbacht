@@ -1,0 +1,13 @@
+E-MAIL
+emailjs.com
+sign-in: deAmbachtpancakes@gmail.com
+passw: rob622623
+
+SMTP server
+Name: Pannenkoekenkar de Ambacht
+Service ID: service_cf9lyxd
+Host:smtp.strato.com
+Port: 465
+Use SSL: (vink)
+User: info@pannenkoekenkardeambacht.nl
+Passwrd: RbvanB@203541

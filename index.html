@@ -1,6 +1,16 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TV4143NGTN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TV4143NGTN');
+    </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,80 +18,108 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>de Ambacht</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="offerte.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+
+
+
     <script src="https://kit.fontawesome.com/507e3da8ea.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init("sRwRJywLP_JdNvNsS");
         })();
-
     </script>
+
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             background: rgb(245, 238, 238);
         }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+
 
         img {
             width: 100%;
         }
 
         section {
-            padding: 60px 0;
+            padding: 0px 0px;
         }
     </style>
 </head>
 
 <body>
     <!-- nav-bar -->
-    <nav class="navbar fixed-top navbar-expand-md bg-light ">
-        <!-- <nav class="navbar navbar-expand-md navbar-light pt-5 pb-4"> -->
-        <div class="container-fluid">
-            <a class="navbar-brand " href="#">
-                <!-- <img src="assets\logo.ico" alt="Bootstrap"> -->
-
-                <img src="assets\logo.ico" alt="Bootstrap" style="height:40px;width:40px">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">de Ambacht</a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse justify-content-start" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#how_it_works">Werk wijze</a>
-
-                    <a class="nav-link" href="#prijzen">Prijzen</a>
-                    <a class="nav-link" href="#reviews">Reviews</a>
-
-                    <a class="nav-link" href="#contact">Reserveer</a>
-                    <a class="nav-link" href="#contact">Contact / informatie</a>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href=""><span data-bs-target="#navbarSupportedContent"
+                                data-bs-toggle="collapse">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-how-it-works"><span data-bs-target="#navbarSupportedContent"
+                                data-bs-toggle="collapse">Werk wijze</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-pricing"><span data-bs-target="#navbarSupportedContent"
+                                data-bs-toggle="collapse">Prijzen</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-reviews"><span data-bs-target="#navbarSupportedContent"
+                                data-bs-toggle="collapse">Reviews</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-contact"><span data-bs-target="#navbarSupportedContent"
+                                data-bs-toggle="collapse">Info-Contact</span></a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </nav> -->
+    </nav>
 
     <!-- main image & intro text -->
-    <section id="intro">
-        <div class="container-lg">
+    <section id="section-intro">
+
+        <div class="container-lg pt-5 my-5">
             <div class="row justify-content-center align-items-center">
-                <div class="col-md-5 text-center text-md-start">
+                <div class="col-md-5 text-start text-md-start">
                     <h1>
-                        <div class="display-2">de Ambacht</div>
-                        <div class="display-5 text-muted">Pannenkoekenkar
+                        <div class="display-2 d-none">de Ambacht</div>
+                        <div class="display-5 font-weight-bold">Pannenkoekenkar
                     </h1>
-                    <p class="lead my-4 display-7">Pannenkoeken bakken op locatie.</p>
-                    <a href="#contact" class="btn btn-secondary text-dark btn-lg bg-warning">Reserveer nu !</a>
-                    <div class="m-5 display-7 text-muted">Pannekoekenkar de Ambacht bereidt zijn pannenkoeken nog op
+
+                    <p class="lead my-2 display-7">Pannenkoeken bakken op locatie.</p>
+                    <!-- <a href="#contact" class="btn btn-secondary text-dark btn-lg bg-warning">Reserveer nu !</a> -->
+                    <div class="m-1 display-7 text-muted">Pannekoekenkar de Ambacht bereidt zijn pannenkoeken nog op
                         ambachtelijke wijze en zal door de ambiance een meerwaarde zijn voor iedere gelegenheid. Of het
                         nu een verjaardag, familiedag, bruiloft, jubileum of een promotie is, als u iets unieks wilt dan
                         kan Pannenkoekenkar de Ambacht dit voor u verzorgen.</div>
                 </div>
-                <div class="col-md-5 text-center d-none d-md-block">
+                <!-- <div class="col-md-5 text-center d-none d-md-block"> -->
+                <div class="col-md-5 text-center">
                     <img class="img-fluid rounded-end-circle" src="assets\ambacht_2.jpeg"
                         alt="pannenkoekenkar de Ambacht">
                 </div>
@@ -90,8 +128,8 @@
     </section>
 
     <!-- Topic Hoe gaan wij te werk -->
-    <section id="how_it_works">
-        <h3 class="text-center">Hoe gaan wij te werk ?</h3>
+    <section id="section-how-it-works">
+        <h3 class="text-center pt-5 ">Hoe gaan wij te werk ?</h3>
 
         <div class="row my-5 align-items-start justify-content-center g-0">
             <div class="col-12 col-lg-4 col-xl-3">
@@ -100,7 +138,8 @@
                     <div class="card-body">
                         <h5 class="card-title text-decoration-underline">Kiezen</h5>
                         <p class="card-text">Aan de pannenkoekenkar hangen menukaarten met diverse toppings. Je kan zelf
-                            keuze maken welke toppings je op je pannenkoek wilt, en deze combineren tot de perfecte
+                            keuze maken uit een hartige of een zoete pannenkoek en welke toppings je wilt, en deze
+                            combineren tot de perfecte
                             pannenkoek die aan al jouw verwachtingen voldoet. Zo zorgen wij voor een unieke en
                             smakelijke ervaring!</p>
                     </div>
@@ -126,9 +165,14 @@
                     <img class="card-img-top-fluid rounded-circle p-4" src="assets/hoe_3.jpg" alt="image-kiezen">
                     <div class="card-body">
                         <h5 class="card-title text-decoration-underline">Topping</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi suscipit
-                            iusto similique, ducimus nostrum beatae ullam hic quasi nulla magni sit molestias eaque
-                            tempora dolorum voluptatibus debitis magnam facilis atque?</p>
+                        <p class="card-text">Zodra de pannenkoek perfect gaar is, geeft de pannenkoekenbakker deze door
+                            aan zijn assistent. Deze voorziet de pannenkoek van een heerlijke topping. Afhankelijk van
+                            het arrangement is er de keuze uit gewone stroop, karamel stroop, poedersuiker, nutella of
+                            een
+                            combinatie daarvan toe. Het is de kunst om de juiste hoeveelheid topping toe te voegen
+                            zonder de delicate smaak van de
+                            pannenkoek te overweldigen. Zo wordt pannenkoek omgetoverd tot heerlijke lekkernij waarvan
+                            iedereen zou genieten.</p>
                     </div>
                 </div>
 
@@ -138,10 +182,9 @@
                     <img class="card-img-top-fluid rounded-circle p-4" src="assets/liz.jpg" alt="image-kiezen">
                     <div class="card-body">
                         <h5 class="card-title text-decoration-underline">Genieten</h5>
-                        <p class="card-text ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus ratione
-                            ipsam explicabo necessitatibus officiis accusamus doloribus, debitis amet, laudantium
-                            distinctio qui, officia nobis magnam aperiam corporis sequi magni excepturi? Doloribus nulla
-                            corrupti aut eum incidunt reiciendis porro expedita veniam alias!</p>
+                        <p class="card-text ">De assistent rolt de pannenkoek met topping op en verpakt hem in een
+                            langwerpig kartonnen doosje. Inclusief servet en
+                            duurzaam disposable bestek is hij perfect om onderweg van te genieten. Smakelijk!</p>
                     </div>
                 </div>
 
@@ -151,114 +194,191 @@
     </section>
 
     <!-- pricing plans -->
-    <section id="prijzen" class="bg-light mt-5 ">
-        <div class="text-center">
-            <img src="assets\ambacht_2_1.jpeg" alt="Responsive image">
+    <section id="section-pricing" class=" ">
+        <div class="container pt-5 mt-5">
+            <div class="text-center">
+                <img src="assets\ambacht_2_1.jpeg" alt="Responsive image">
+            </div>
+
         </div>
 
         <div class="container-lg my-5">
             <div class="row">
-                <div class="col-lg-2 col-sm-5">
+                <div class="col-lg-2 col-sm-5 d-none d-md-block">
                     <img src="assets\euro.png" class="img-fluid" alt="Responsive image">
                 </div>
                 <div class="col-lg-7 col-sm-5">
                     <div class="card-body">
                         <h5 class="card-title">Hoe stellen wij onze prijs samen?</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <h6 class="card-subtitle mb-2 text-muted"></h6>
                         <p class="card-text">Wij bakken onze pannenkoeken op locatie en hanteren daarbij een uurtarief.
                             Voor de eerste 60 kilometer vanaf onze standplaats in Haarlem tot de plaats waar we gaan
                             bakken rekenen wij een startbedrag van €145,- aan reis- en voorbereidingskosten. Is de
                             afstand groter dan 60 kilometer? Dan berekenen wij een toeslag. Wij rekenen graag voor u uit
                             wat de kosten zullen zijn, zodat u niet voor verrassingen komt te staan. </p>
-                        <a href="https://www.google.nl/maps/dir//Haarlem/@52.3873671,4.5761796,12z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47c5ef6c60e1e9fb:0x8ae15680b8a17e39!2m2!1d4.6462194!2d52.3873878!3e0?hl=nl"
-                            class="card-link">Afstand Haarlem tot.....</a>
-                        <a href="#contact" class="card-link mx-5">Voor meer informatie.</a>
+
 
                     </div>
 
                 </div>
                 <div class="col-lg-2 col-sm-5">
-                    <div class="p-3 "></div>
+                    <div class="p "></div>
                 </div>
             </div>
-
         </div>
+    </section>
+    <!-- GoogleMaps-Distance -->
+    <section id="distance-intro">
 
+    </section>
+    <!-- Arrangement -->
+    <section id="arrangement">
         <div class="row my-5 align-items-start justify-content-center g-0">
-            <div class="col-8 col-lg-4 col-xl-3">
-                <div class="card border-0">
-                    <div class="card-body text-center py-4">
+            <div class="col-11 col-lg-4 col-xl-3">
+                <div class="card border-1">
+                    <div class="card-body text-center py-5 ">
                         <h4 class="card-title"><em>Basic</em></h4>
                         <p class="lead card-subtitle">Pannenkoeken</p>
                         <p class="display-4 my-4 text-warning fw-bold">€170,= <span class="display-6">p/u</span></p>
-                        <p class="card-text mx-5 text-muted d-none d-lg-block">Dit arrangement is op basis van onbeperkt
+                        <p class="card-text mx-5 text-muted d-lg-block">Dit arrangement is op basis van onbeperkt
                             naturel pannenkoeken bakken. De capaciteit is circa 100 pannenkoeken p/u.</p>
                         <details>
                             <summary class="fw-bold" style="color:rgb(255, 162, 0)">"Basic"......... </summary>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus possimus
-                                exercitationem dignissimos! Quibusdam sint nostrum doloremque distinctio, dolor, iusto
-                                sequi quis illum rerum eos, aliquam repudiandae. Iusto illo ipsum optio!</p>
+                            <div id="meer">
+                                <p id="title">Assortiment:</p>
+                                <p id="item">Naturel.</p>
+                                <p id="title">Inclusief:</p>
+                                <p id="item">Disposable bestek, bakjes en servetten.</p>
+                                <p id="title">Toppings:</p>
+                                <p id="item">Stroop en poedersuiker.</p>
+                                <p id="title">Prijs:</p>
+                                <p id="item">€ 170,00 euro p/u.</p>
+                                <p id="title">Reis- en voorbereidingskosten</p>
+                                <p id="item">€ 145,00 </p>
+                                <p id="afstand">Is de afstand vanaf Haarlem groter dan 60 km dan berekenen wij een
+                                    toeslag.</p>
+                                <p id="title"></p>
+                                <br>
+                                <p id="title">Voorbeeld:</p>
+                                <p id="item">60 personen.</p>
+                                <p id="item">1,5 uur bakken.</p>
+                                <p id="item">€ 400,00 (€6,65 p.p.)</p>
+                            </div>
                         </details>
                         <a href="#contact" class="btn btn-outline-primary btn-lg mt-3">Reserveer nu !!</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-9 col-lg-4 col-xl-3">
+            <div class="col-11 col-lg-4 col-xl-3">
                 <div class="card border-primary border-2">
                     <div class="card-header text-primary fw-bold text-center">Meest gekozen </div>
                     <div class="card-body text-center py-5">
                         <h4 class="card-title"><em>Luxe</em></h4>
                         <p class="lead card-subtitle">Pannenkoeken</p>
                         <p class="display-4 my-4 text-primary fw-bold">€190,=<span class="display-6">p/u</span></p>
-                        <p class="card-text mx-5 text-muted d-none d-lg-block">Dit arrangement bestaat uit een
+                        <p class="card-text mx-5 text-muted d-lg-block">Dit arrangement bestaat uit een
                             uitgebreid van hartig tot zoet assortiment. Het is op basis van "onbeperkt" met een
                             capaciteit van 70 pannenkoeken p/u.</p>
                         <details>
                             <summary class="fw-bold" style="color:rgb(255, 162, 0)">"Luxe"......... </summary>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus possimus
-                                exercitationem dignissimos! Quibusdam sint nostrum doloremque distinctio, dolor, iusto
-                                sequi quis illum rerum eos, aliquam repudiandae. Iusto illo ipsum optio!</p>
+                            <div id="meer">
+                                <p id="title">Assortiment:</p>
+                                <p id="item">Naturel, kaas, spek, appel, rozijnen, boerenjongens, Nutella.</p>
+                                <p>Ingrediënten kunnen in elke gewenste combinatie worden toegepast.</p>
+                                <p id="title">Inclusief:</p>
+                                <p id="item">Disposable bestek, bakjes en servetten.</p>
+                                <p id="title">Toppings:</p>
+                                <p id="item">Stroop, Karamelstroop, Chocoladestroop Nutella en poedersuiker.</p>
+                                <p id="title">Prijs:</p>
+                                <p id="item">€ 190,00 euro p/u.</p>
+                                <p id="title">Reis- en voorbereidingskosten</p>
+                                <p id="item">€ 145,00 </p>
+                                <p id="afstand">Is de afstand vanaf Haarlem groter dan 60 km dan berekenen wij een
+                                    toeslag.</p>
+                                <p id="title"></p>
+                                <br>
+                                <p id="title">Voorbeeld:</p>
+                                <p id="item">60 personen.</p>
+                                <p id="item">2 uur bakken.</p>
+                                <p id="item">€ 525,00 (€8,75 p.p.)</p>
+
+                            </div>
+
                         </details>
                         <a href="#contact" class="btn btn-outline-primary btn-lg mt-3">Reserveer nu !!</a>
                     </div>
                 </div>
             </div>
-            <div class="col-8 col-lg-4 col-xl-3">
-                <div class="card border-0">
+            <div class="col-11 col-lg-4 col-xl-3">
+                <div class="card border-1">
                     <div class="card-body text-center py-4">
                         <h4 class="card-title"><em>Super</em></h4>
                         <p class="lead card-subtitle">Pannenkoeken</p>
                         <p class="display-5 my-4 text-warning fw-bold">€255,=<span class="display-6">p/u</span></p>
-                        <p class="card-text mx-5 text-muted d-none d-lg-block">Dit arrangement bestaat uit een
+                        <p class="card-text mx-5 text-muted d-lg-block">Dit arrangement bestaat uit een
                             uitgebreide assortiment en een selectie speciale pannenkoeken. Het is op basis van onbeperkt
                             met een capaciteit van 60 a 70 p/u.</p>
                         <details>
                             <summary class="fw-bold" style="color:rgb(255, 162, 0)">"Super"......... </summary>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus possimus
-                                exercitationem dignissimos! Quibusdam sint nostrum doloremque distinctio, dolor, iusto
-                                sequi quis illum rerum eos, aliquam repudiandae. Iusto illo ipsum optio!</p>
+                            <div id="meer">
+                                <p id="title">Assortiment:</p>
+                                <p id="item">Naturel, kaas, spek, appel, rozijnen, boerenjongens, Nutella.</p>
+                                <p id="item">Ingrediënten kunnen in elke gewenste combinatie worden toegepast.</p>
+
+                                <p id="title">Speciaal:</p>
+                                <p id="item">Banaan speciaal.</p>
+                                <p id="subtitle">Banaan, Nutella, Noten</p>
+
+
+                                <p id="item">La Dolce Vita.</p>
+                                <p id="subtitle">Ham, zongedroogde tomaat, kaas, italiaanse kruiden en rucola.</p>
+
+
+                                <p id="item">Hawai</p>
+                                <p id="subtitle">Ham, kaas, ananas</p>
+
+
+                                <p id="item">Grand Marnier</p>
+
+                                <p id="item">Malibu</p>
+                                <p id="subtitle">Malibu, kokos</p>
+
+                                <p id="title">Inclusief:</p>
+                                <p id="item">Disposable bestek, bakjes en servetten.</p>
+                                <p id="title">Toppings:</p>
+                                <p id="item">Stroop, Karamelstroop, Chocoladestroop Nutella en poedersuiker.</p>
+                                <p id="title">Prijs:</p>
+                                <p id="item">€ 225,00 euro p/u.</p>
+                                <p id="title">Reis- en voorbereidingskosten</p>
+                                <p id="item">€ 145,00 </p>
+                                <p id="afstand">Is de afstand vanaf Haarlem groter dan 60 km dan berekenen wij een
+                                    toeslag.</p>
+                                <p id="title"></p>
+                                <br>
+                                <p id="title">Voorbeeld:</p>
+                                <p id="item">60 personen.</p>
+                                <p id="item">2 uur bakken.</p>
+                                <p id="item">€ 655,00 (€10,91 p.p.)</p>
+
+                            </div>
+
                         </details>
                         <a href="#contact" class="btn btn-outline-primary btn-lg mt-3">Reserveer nu !!</a>
                     </div>
 
                 </div>
             </div>
-            <div class="col-8 col-lg-4 col-xl-3">
-                <div class="card border-0">
+            <div class="col-11 col-lg-4 col-xl-3">
+                <div class="card border-1">
                     <div class="card-body text-center py-4">
                         <h4 class="card-title"><em>Late Night</em></h4>
                         <p class="lead card-subtitle">Pannenkoeken</p>
                         <p class="display-7 my-4 text-warning fw-bold">PRIJS in overleg</p>
-                        <p class="card-text mx-5 text-muted d-none d-lg-block">Na afloop van uw feest nog een lekker
+                        <p class="card-text mx-5 text-muted d-lg-block">Na afloop van uw feest nog een lekker
                             hapje. Het arrangement bestaat uit een uitgebreide assortiment pannenkoeken. Voor meer
                             informatie kunt u contact met ons opnemen. </p>
-                        <details>
-                            <summary class="fw-bold" style="color:rgb(255, 162, 0)">"Late Night"......... </summary>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus possimus
-                                exercitationem dignissimos! Quibusdam sint nostrum doloremque distinctio, dolor, iusto
-                                sequi quis illum rerum eos, aliquam repudiandae. Iusto illo ipsum optio!</p>
-                        </details>
+
                         <a href="#contact" class="btn btn-outline-primary btn-lg mt-3">Reserveer nu !!</a>
 
                     </div>
@@ -268,17 +388,185 @@
         </div>
         </div>
     </section>
+    <!-- Google-Maps -->
+    <section id="maps">
+        <div class="container-lg pt-5 my-5 text-center bg-light">
+            <h2><i class="bi bi-stars text-warning"></i> Bereken wat het ongeveer gaat kosten.</h2>
+            <details class="bg-light">
+                <summary class="fw-bold" style="color:rgb(255, 162, 0)">Bereken hier de kosten.........</summary>
 
+                <div class="container-lg pt-1">
+                    <div class="text-center">
+
+                        <h5 class="text-start"> Bereken de afstand Haarlem-"Bak-plaats".</h5>
+                    </div>
+                    <div class="form-group mx-3">
+
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text text-warning"><i class="fa-solid fa-tree-city"></i></span>
+                            <input type="text" id="to" placeholder="vul hier bak-plaats (stad) in" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-offset-2 col-xs-10 text-center mb-2">
+                        <button id="btn" class="btn btn-warning my-2 " onclick="calcRoute();"><i
+                                class="fas fa-map-signs"></i>
+                            bereken afstand</button>
+                    </div>
+                </div>
+
+                </form>
+                <form class="form-horizontal">
+                    <div class="container-fluid p-0">
+                        <div id="googleMap">
+
+                        </div>
+                        <div id="travelDistance" style="color:white">
+
+                        </div>
+                        <div id="output" class="text-primary text-center p-4">
+
+                        </div>
+
+                    </div>
+                </form>
+
+                <div class="slidecontainer text-secondary">
+                    <div class="row justify-content-center mt-3 text-secondary">
+                        <hr class="hr hr-blurry" />
+                        <h5>Aantal gasten:</h5>
+                        <div class="row justify-content-center">
+                            <div class="btn-group justify-content-center ">
+                                <a id="btn-deco" class=" " onclick="downGasten()"><i
+                                        class="fa-regular fa-circle-down"></i></a>
+
+                                <label id="aantal" class="label text-center">35</label>
+                                <a id="btn-deco" class="" onclick="upGasten()""><i class=" fa-regular
+                                    fa-circle-up"></i></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <h5 id="aantalGasten" for="customRange3" class="form-label">Hoeveel gasten verwacht je
+                        ongeveer?</h5>
+                    <!-- <input type="range" min="20" max="120" step="10" value="40" class="slider" id="aantGasten"
+                        onchange="gasten()"> -->
+                </div>
+                <div>
+                    <div class="container-fluid my-5">
+                        <ul class="list-group my-5 text-secondary">
+                            <hr class="hr hr-blurry" />
+                            <h5>Arrangementen:</h5>
+                            <li id="list-deco-basic" class="btn btn-outline-warning my-1 mx-5"
+                                onclick="choiceArrangement('basic')">
+                                "Basic"
+                                arrangement €170,= per/uur</li>
+                            <li id="list-deco-luxe" class="btn btn-warning my-1 mx-5" onclick="choiceArrangement('luxe')">
+                                "Luxe"
+                                arrangement
+                                €190,= per/uur</li>
+                            <li id="list-deco-super" class="btn btn-outline-warning my-1 mx-5"
+                                onclick="choiceArrangement('super')">
+                                "Super"
+                                arrangement €255,= per/uur</li>
+                            <div class="mt-2">
+                                <h5 id="arrangemen-keuze" class="form-label mt-3">Kies het arrangement.
+                                </h5>
+                            </div>
+
+                        </ul>
+
+                    </div>
+                    <!-- Instellen baktijd voor total-prijs-indicatie -->
+                    <div class="row justify-content-center mt-3 text-secondary">
+                        <hr class="hr hr-blurry" />
+                        <h5>Tijd:</h5>
+                        <div class="row justify-content-center">
+                            <div class="btn-group justify-content-center ">
+                                <a id="btn-deco" class=" " onclick="down()"><i
+                                        class="fa-regular fa-circle-down"></i></a>
+
+                                <label id="baktijd" class="label text-center">1,5 uur</label>
+                                <a id="btn-deco" class="" onclick="up()"><i class="fa-regular fa-circle-up"></i></a>
+                            </div>
+                            <div class="mt-2">
+                                <h5 id="baktijd-keuze" class="form-label ">Stel de bak-tijd in.
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                   
+                        <div class="row justify-content-center mt-3 text-secondary">
+                            <hr class="hr hr-blurry" />
+                            <h5>Datum</h5>
+                            <div class="row justify-content-center">
+                                <div class="btn-group justify-content-center ">
+
+                                    <input class="my-2 mx-1 p-2" id="date" onchange="getDate()" type="date" min=""
+                                        name="" value="">
+                                 
+                                </div>
+                                <div class="mt-2">
+                                    <h5 id="dateTime" class="form-label ">Kies de gewenste datum.
+                                    </h5>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                   
+                    <div class="row justify-content-center mt-3 text-secondary">
+                        <hr class="hr hr-blurry" />
+                        <h5>Aanvangstijd</h5>
+                        <div class="row justify-content-center">
+                            <div class="btn-group justify-content-center ">
+                                <a id="btn-deco" class=" " onclick="timeDown()"><i class="fa-regular fa-circle-down"></i></a>
+                    
+                                <label id="aanvang" class="label text-center">16:00 uur</label>
+                                <a id="btn-deco" class="" onclick="timeUp()"><i class="fa-regular fa-circle-up"></i></a>
+                            </div>
+                            <div class="mt-2">
+                                <h5 id="aanvangsTijd" class="form-label ">Kies de aanvangstijd.
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+                    <div class="form-floating mb-0 mt-5">
+                        <div>
+                            <p id="message1" class="form-control"></p>
+                        </div>
+
+                        <div class="mb-4 mt-3 text-center">
+                            <button type="submit" class="btn btn-warning">Verstuur
+                                !</button>
+                        </div>
+                        <!-- <label for="vraag">Je vraag/nadere info....</label> -->
+                    </div>
+
+                </div>
+        </div>
+        </details>
+
+    </section>
     <!-- reviews list -->
-    <section id="reviews" class="bg-light">
+    <section id="section-reviews">
         <div class="text-center">
             <img src="assets\review.jpg" alt="Responsive image">
         </div>
         <div class="container-lg">
             <div class="text-center">
-                <h2><i class="bi bi-stars text-warning"></i> Je mening over ons. <i
-                        class="bi bi-stars text-warning"></i></h2>
+                <h2><i class="bi bi-stars text-warning"></i> Je mening over ons.</h2>
+                <a href="#sidebar" class="mb-3 py-1 btn btn-secondary text-dark btn-lg bg-warning" title=""
+                    data-bs-toggle="offcanvas" role="button" aria-controls="sidebar">Click hier en deel je ervaring.</a>
                 <p class="text-lead">Dit zijn de ervaringen met onze pannenkoekenkar</p>
+
+
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="list-group lead text-start">
@@ -290,11 +578,58 @@
                                     <i class="bi bi-star-half"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <h5 class="mb-1 text-primary">Mooie kar, lekker en gezellig</h5>
-                                <p class="mb-1">Echt heel gezellig en lekker. Bijkomend voordeel geen eten inslaan en
-                                    geen afwas. Heb ik als gastvrouw ook een beetje kunnen geniet van de feestvreugde.
+                                <div>
+                                    <h5 class="mb-1  text-primary" id="review-text-deco">Mooie kar, lekker en gezellig
+                                    </h5>
+                                    <p class="mb-1" id="review-text-deco">Echt heel gezellig en lekker. Bijkomend
+                                        voordeel geen eten inslaan en
+                                        geen afwas. Heb ik als gastvrouw ook een beetje kunnen genieten van de
+                                        feestvreugde.
+                                    </p>
+                                    <small class="text-primary" id="review-text-deco">geschreven door: Sieneke</small>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="list-group lead text-start">
+                            <div class="list-group-item py-3 ">
+                                <div class="pb-2 text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <h5 class="mb-1 text-primary" id="review-text-deco">Echt een aanvulling op ons huwelijk.
+                                </h5>
+                                <p class="mb-1" id="review-text-deco">Hey Rob, wat waren ze lekker, wat was het gezellig
+                                    en wat zijn jullie
+                                    toppers. Heel veel complimenten gehad over jullie, en bij deze nogmaals ook van ons.
                                 </p>
-                                <small class="text-primary">geschreven door: Sieneke</small>
+                                <small class="text-primary" id="review-text-deco">geschreven door: Michel</small>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="list-group lead text-start">
+                            <div class="list-group-item py-3 ">
+                                <div class="pb-2 text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <h5 class="mb-1 text-primary" id="review-text-deco">Tot volgend jaar</h5>
+                                <p class="mb-1" id="review-text-deco">Beste Rob. Heel hartelijk dank voor de fijne lunch
+                                    met pannenkoeken. Jos
+                                    straalde helemaal en daar doen we het voor. Dit is zeker voor herhaling vatbaar.
+                                    Hopelijk tot volgend jaar.</p>
+                                <small class="text-primary" id="review-text-deco">geschreven door: Henny</small>
 
                             </div>
                         </div>
@@ -309,11 +644,14 @@
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                 </div>
-                                <h5 class="mb-1 text-primary">Bedankt en hopelijk tot ziens.</h5>
-                                <p class="mb-1">Beset Rob, heel hartelijk dank voor de fijne lunch met pannenkoeken. Jos
-                                    straalde helemaal en daar doen we het voor. Dit is zeker voor herhaling vatbaar.
-                                    Hopelijk tot volgend jaar.</p>
-                                <small class="text-primary">geschreven door: Henny van der H</small>
+                                <h5 class="mb-1 text-primary" id="review-text-deco">Fijn dat jullie er waren.</h5>
+                                <p class="mb-1" id="review-text-deco">De dag is echt heel waardevol geweest en het was
+                                    voor ons fijn dat we
+                                    niets hoefde te doen aan de catering. Dat gaf ons echt ruimte en zo zijn we ook
+                                    weggebleven van de cake en broodjes van een rouwcentrum. Die setting wilden wij
+                                    perse niet uitstralen. Dus heel fijn dat jullie er met jullie pannenkoekekar bij
+                                    waren.</p>
+                                <small class="text-primary" id="review-text-deco">geschreven door: Marga</small>
 
                             </div>
                         </div>
@@ -321,15 +659,13 @@
                 </div>
             </div>
         </div>
-
     </section>
-
     <!-- contact form -->
-    <section id="contact">
-        <div class="container-lg">
+    <section id="section-contact">
+        <div class="container-lg pt-5">
             <div class="text-center">
                 <h2>Heb je op- aanmerkingen of een vraag?</h2>
-                <p class="lead"> Vul het formulier in en ik neem direct contact met je op.</p>
+                <p class="lead display-7"> Vul het formulier in en we nemen direct contact met je op.</p>
             </div>
             <div class="row justify-content-center my-5">
                 <div class="col-lg-6">
@@ -355,8 +691,6 @@
                             <input type="text" class="form-control" id="number"
                                 placeholder="vul hier het nummer in waar op we je kunnen bereiken..">
                         </div>
-
-
 
                         <label for="place" class="form-label">Stad:</label>
                         <div class="input-group mb-3">
@@ -386,30 +720,159 @@
             </div>
         </div>
     </section>
-
     <!-- footer -->
-    <section class="footer bg-secondary py-2">
+    <section class="footer bg-secondary py-1">
         <div class="container lg">
-            <div class="text-center">
+            <div class="row">
+                <div class="col-lg-1 col-sm-1">
+                    <div class="p-3 tex-light bg-secondary">
+                        <div class="text-center">
+                            <h2 class="text-light">
+                                <img src="assets\logo_white.png" alt="Responsive image"
+                                    style="width:5.5rem;color: white">
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-3 text-light">
+                    <p>Pannenkoekenkar de Ambacht</p>
+                    <p>correspondentie adres:</p>
+                    <p>Professor Pelstraat 41</p>
+                    <p>2035CP Haarlem</p>
+                </div>
+                <div class="col-lg-4 col-sm-4">
+                    <div class="p-3 tex-light bg-secondairy">
+                        <div class="text-center">
+                            <h2 class="text-light">
+                                <img src="assets\linda4.jpg" alt="Responsive image"
+                                    style="border-radius:4px;height:7rem">
+
+                            </h2>
+                            <div class="p-2 tex-light bg-secondairy">
+                                <div class="text-center">
+                                    <h2 class="text-light">
+                                        <i class="bi bi-facebook p-3"></i>
+                                        <i class="bi bi-whatsapp p-3"></i>
+                                        <i class="bi bi-instagram p-3"></i>
+
+                                    </h2>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-4 text-light">
+                    <div class="p-3 tex-light">
+                        <div class="text-start">
+                            <h2 class="text-light">
+                                <div id="nummers">
+                                    <i class="fa-solid fa-globe"></i>
+                                    <h1>www.pannenkoekenkardeambacht.nl</h1>
+                                </div>
+                                <div id="nummers">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <h1>info@pannenkoekenkardeambacht.nl</h1>
+                                </div>
+                                <div id="nummers">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <h1>0615 02 96 30</h1>
+                                </div>
+
+                                <div id="nummers">
+                                    <i class="bi bi-whatsapp"></i>
+                                    <h1>0622 23 48 37</h1>
+
+                                </div>
+                                <div id="nummers">
+                                    <i class="fa-solid fa-house-circle-check"></i>
+                                    <h1>KVK-nummer: 50487809</h1>
+                                </div>
+                            </h2>
+
+                        </div>
+                    </div>
+                </div>
+                <h1 style="color:white;font-size:.7rem;">© 2023 Pannenkoekenkar de Ambacht</h1>
+                .
+            </div>
+            <!-- <div class="text-center">
                 <h2 class="text-light">
                     <i class="bi bi-facebook p-3"></i>
                     <i class="bi bi-whatsapp p-3"></i>
                     <i class="bi bi-instagram p-3"></i>
+                    © 2023 Pannenkoekenkar de Ambacht
                 </h2>
 
+            </div> -->
+        </div>
+    </section>
+    <!-- offcanvas -->
+    <section id="offcanvas">
+        <div class=" offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebar-label">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <!-- <nav class="navbar navbar-default">
+                </nav> -->
+                <!-- <div class="col-md-3"></div> -->
+                <div class="container-fluid text-center bg-light">
+                    <h3 class="text-primary">We zijn benieuwd naar je ervaring</h3>
+                    <hr style="border-top:1px dotted #fc0;" />
+                    <div class="col-md-3"></div>
+                    <div class="col-md-12">
+                        <div>
+                            <h3>Waardering:</h3>
+                            <div style="border:solid 2px rgb(255, 180, 3);border-radius: 10px;background: rgb(241, 238, 238);"
+                                class="p-2">
+                                <span id="1" style="font-size:45px; cursor:pointer;" class="fa fa-star"
+                                    onmouseover="startRating(this)" startRating="starmark(this)"></span>
+                                <span id="2" style="font-size:45px; cursor:pointer;" class="fa fa-star"
+                                    onmouseover="startRating(this)" startRating="starmark(this)"></span>
+                                <span id="3" style="font-size:45px; cursor:pointer;" class="fa fa-star"
+                                    onmouseover="startRating(this)" startRating="starmark(this)"></span>
+                                <span id="4" style="font-size:45px; cursor:pointer;" class="fa fa-star"
+                                    onmouseover="startRating(this)" startRating="starmark(this)"></span>
+                                <span id="5" style="font-size:45px; cursor:pointer;" class="fa fa-star"
+                                    onmouseover="startRating(this)" startRating="starmark(this)"></span>
+
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group text-start">
+                            <h3>Je ervaring:</h3>
+                            <textarea id="review" class="form-control" style="resize:none; height:100px;"></textarea>
+                        </div>
+                        <center><button id="send" class="btn btn-success m-2 px-5" data-bs-toggle="tooltip"
+                                data-bs-placement="right" title="Email uw ervaring" onclick="result()">verstuur</button>
+                        </center>
+                        <div id="result"></div>
+
+                    </div>
+                </div>
+                <script src="rating.js"></script>
             </div>
         </div>
 
-
-
-
+        </div>
 
     </section>
+    <script src="index.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFD45uS8bZEgS34Q3XRLctgoiRJ0-GXnA&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+
 </body>
 
 </html

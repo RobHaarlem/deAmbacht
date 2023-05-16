@@ -1,0 +1,65 @@
+#baktijd,#aantal, #aanvang{
+    border: 1px solid black;
+    border-radius: 3px;
+    color: white;
+    font-size: 1.5rem;
+    background: orange;
+    padding: 5px 0;  
+    width: 150px;
+    justify-items: center;
+}
+#btn-deco{
+    font-size: 2em;
+    padding: 0;
+    color: white;
+    background: chocolate;
+}
+#list-deco{
+    background:black;
+    color: lime;
+    transition:background 300ms ease-out 30ms ;
+}
+#list-deco-basic,
+#list-deco-luxe,
+#list-deco-super{
+    color:black;
+     transition:background 300ms ease-out 30ms ;
+}
+#list-deco-basic:hover,
+#list-deco-luxe:hover,
+#list-deco-super:hover,
+#bttn-deco:hover{
+    background:rgba(255, 166, 0, 0.416);
+    color:rgb(122, 91, 91);
+   
+}
+#aantGasten{
+    -webkit-appearance: none;
+  width: 80%;
+  height: 15px;
+  background: rgba(255, 166, 0, 0.549);
+  border: 1px solid chocolate;
+  outline: none; 
+  border-radius: 10px;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border:3px solid white;
+  border-radius: 1rem;
+  background:chocolate;
+  cursor: pointer;
+}
+
+#message1{
+    border: 2px solid orange;
+    background: rgba(255, 166, 0, 0.325);
+}
+
+

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/507e3da8ea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="offerte.css">
+    <title>offerte</title>
+</head> -->
+<head>
+    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distances btn two cities App</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/507e3da8ea.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="App.css" rel="stylesheet" />
+    <link rel="stylesheet" href="offerte.css">
+</head>
+
+<body
+<body>
+    <!-- contact form -->
+    <section id="section-contact">
+        <div class="container-lg pt-5">
+            <div class="text-center">
+                <h2>Wil je een idee over de totaal prijs?</h2>
+                <p class="lead display-7"> Dat kan met het onderstaand formulier.</p>
+                <p class="lead display-7">Wil je van ons een reactie of bevestiging?</p>
+                <p class="lead display-7">Vergeet dan niet je e-mail adres in te vullen.</p>
+            </div>
+            <div class="row justify-content-center my-5">
+                <div class="col-lg-6">
+                    <form>
+                        <label for="email" class="form-label">Email adres:</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text text-warning"><i
+                                    class="fa-sharp fa-solid fa-envelope-circle-check"></i></span>
+                            <input type="email" class="form-control" id="email"
+                                placeholder="vul hier je e-mail adres in.">
+                        </div>
+
+                        <label for="name" class="form-label">Naam:</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text text-warning"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" class="form-control" id="name" placeholder="vul hier je naam in.">
+                        </div>
+
+                        <label for="place" class="form-label">Reisafstand Haarlem - Bakplaats:</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text text-warning"><i class="fa-solid fa-tree-city"></i></span>
+                            <input type="text" class="form-control" id="city"
+                                placeholder="vul hier bak-plaats (stad) in.">
+                        </div>
+<section id="distance-intro">
+    <div class="container-lg pt-3">
+        <div class="text-center">
+
+            <h4> Bereken de afstand tussen Haarlem en "bak-plaats"</h4>
+        </div>
+        <div class="form-group mx-5">
+
+            <label for="place" class="form-label">Stad:</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text text-warning"><i class="bi bi-houses"></i></span>
+                <input type="text" id="to" placeholder="Bakplaats" class="form-control">
+            </div>
+        </div>
+
+        <div class="col-xs-offset-2 col-xs-10 text-center">
+            <button id="btn" class="btn btn-warning my-2 " onclick="calcRoute();"><i class="fas fa-map-signs"></i>
+                bereken afstand</button>
+        </div>
+    </div>
+
+    </form>
+
+
+
+    <form class="form-horizontal">
+        <div class="container-fluid p-0">
+            <div id="googleMap">
+            </div>
+            <div id="output" class="text-primary">
+            </div>
+        </div>
+</section>
+
+               
+                        <div class="slidecontainer text-secondary">
+                            <h5 id="aantalGasten" for="customRange3" class="form-label">Hoeveel gasten verwacht je
+                                ongeveer?</h5>
+                            <input type="range" min="20" max="120" step="10" value="40" class="slider" id="aantGasten"
+                                onchange="gasten()">
+                        </div>
+                        <div>
+                            <div class="container-fluid my-5">
+                                <ul class="list-group my-5 text-secondary">
+                                    <h5>Arrangementen:</h5>
+                                    <li id="list-deco-basic" class="btn btn-outline-warning my-1"
+                                        onclick="choiceArrangement('basic')">"Basic" arrangement €170,= per/uur</li>
+                                    <li id="list-deco-luxe" class="btn btn-warning my-1"
+                                        onclick="choiceArrangement('luxe')">"Luxe" arrangement €190,= per/uur</li>
+                                    <li id="list-deco-super" class="btn btn-outline-warning my-1"
+                                        onclick="choiceArrangement('super')">"Super" arrangement €255,= per/uur</li>
+                                </ul>
+                            </div>
+                            <div class="row justify-content-center mt-3 text-secondary">
+                                <h5>Tijd:</h5>
+                                <div class="row justify-content-center px-5">
+                                    <div class="btn-group ">
+                                        <a id="btn-deco" class="btn btn-primary mx-2 px-2 " onclick="decrese()"><i
+                                                class="fa-regular fa-circle-down"></i></a>
+
+                                        <label id="baktijd" class="label text-center">1 uur</label>
+                                        <a id="btn-deco" class="btn btn-outline-warning mx-2 px-2" onclick="increse()"><i
+                                                class="fa-regular fa-circle-up"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+                            <div class="form-floating mb-0 mt-5">
+                                <div>
+                                    <p id="message1" class="form-control"></p>
+                                </div>
+
+                                <div class="mb-4 text-center">
+                                    <button type="submit" class="btn btn-warning">Verstuur
+                                        !</button>
+                                </div>
+                                <!-- <label for="vraag">Je vraag/nadere info....</label> -->
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+                <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFD45uS8bZEgS34Q3XRLctgoiRJ0-GXnA&libraries=places"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                <!-- Include all compiled plugins (below), or include individual files as needed -->
+                <script src="Scripts/jquery-3.1.1.min.js"></script>
+                <script src="Main.js"></script>
+
+    <script src="offerte.js"></script>
+</body>
+
+</html>
